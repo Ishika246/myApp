@@ -1,0 +1,25 @@
+<div>{{pageTitle}}</div>
+
+
+
+<p>Book details is here</p>
+<div class='card-body'>
+    <div class='row'>
+        <div class='col-md-4'>Title</div>
+        <div class='col-md-8'>{{book.title}}</div>
+    </div>
+    <div class='row'>
+        <div class='col-md-4'>Author</div>
+        <div class='col-md-8'>{{book.author}}</div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-4'>Price</div>
+        <div class='col-md-8'>{{book.price}}</div>
+    </div>
+</div>
+
+
+<div class='card-footer'>
+<button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,42 @@
+{{errorMessage}}
+<h2>{{title}}</h2>
+
+
+<table class="table">
+
+    <thead>
+        <th><button (click)="toggleImage()">{{showImage?'Hide' :'Show' }} Image</button></th>
+        <th>Title</th>
+        <th>Code</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>PublishOn</th>
+        <th>Ratings</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor='let book of books'>
+            <td><img [src]=book.imageUrl [width]="imgWidth" [height]="imgHeight" *ngIf=showImage></td>
+          <td>
+           
+            <a [routerLink]="['/books',book.bookID]">{{book.title | uppercase}}</a>
+        </td> 
+          <td>{{book.code |lowercase}}</td>
+          <td>{{book.author |titlecase}}</td>
+          <td>{{book.price | currency:"INR" }}</td>
+          <td>{{book.publicationDate | date:'dd/mm/yy'}}</td>
+          <td>{{book.starRating|test}}</td>
+        
+          
+
+
+
+        </tr>
+    </tbody>
+
+    
+</table>
+
+
+
+
